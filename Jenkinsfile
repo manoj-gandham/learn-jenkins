@@ -10,7 +10,7 @@ pipeline {
   }
 
   parameters {
-          string(name: 'PERSON', defaultValue: 'test', description: 'Who should I say hello to?')
+          string(name: 'Dev', defaultValue: 'test', description: 'Who should I say hello to?')
   }
 
   environment {
