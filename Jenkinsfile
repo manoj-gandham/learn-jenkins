@@ -15,7 +15,7 @@ pipeline {
     stage('One') {
       steps {
         sh 'echo Hello World'
-        sh 'echo ${var.url_name}'
+        sh 'echo ${url_name}'
       }
     }
 
