@@ -8,6 +8,7 @@ pipeline {
 
   environment {
     url_name = "mdevops333.online"
+    role = "DevOps"
   }
 
   stages {
@@ -17,6 +18,13 @@ pipeline {
         sh 'echo Hello World'
         sh 'echo ${url_name}'
       }
+    }
+
+    stage('two') {
+       steps {
+         sh 'echo position'
+         sh 'echo ${role}'
+       }
     }
 
   }
