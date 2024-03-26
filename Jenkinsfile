@@ -42,6 +42,7 @@ pipeline {
     }
 
     stage('three') {
+    when {
            expression = {
            CI=true
            }
@@ -49,7 +50,7 @@ pipeline {
              sh 'env'
            }
         }
-
+    }
   }
 
   post {
