@@ -7,7 +7,11 @@ pipeline {
   }
   options {
           ansiColor('xterm')
-      }
+  }
+
+  parameters {
+          string(name: 'PERSON', defaultValue: 'test', description: 'Who should I say hello to?')
+  }
 
   environment {
     url_name = "mdevops333.online"
