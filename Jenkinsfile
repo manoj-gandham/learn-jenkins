@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                'echo ${var.url}'
+                echo '${var.url}'
             }
         }
         stage('Test') {
