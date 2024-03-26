@@ -9,7 +9,7 @@ pipeline {
           ansiColor('xterm')
   }
 
-  triggers { pollSCM('H */1 * * *') }
+  triggers { pollSCM('H/1 * * * *') }
 
   parameters {
           string(name: 'Dev', defaultValue: 'test', description: 'Who should I say hello to?')
