@@ -5,10 +5,16 @@ pipeline {
         }
     }
 
+    environment{
+        url = "mdevops333.online"
+
+    }
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
+                url = ${var.url}
             }
         }
         stage('Test') {
