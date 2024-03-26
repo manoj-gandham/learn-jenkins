@@ -42,6 +42,9 @@ pipeline {
     }
 
     stage('three') {
+           expression = {
+           CI=true
+           }
            steps {
              sh 'env'
            }
