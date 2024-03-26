@@ -1,22 +1,23 @@
 pipeline {
-
     agent {
-        node {
-            label 'workstation'
-        }
+        label 'workstation'
     }
 
     stages {
-        stage('1st') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Building..'
             }
         }
-        stage('2st') {
-             steps {
-                  echo 'Hello from 2nd stage'
-             }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
         }
-
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
