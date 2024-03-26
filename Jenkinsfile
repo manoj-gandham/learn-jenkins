@@ -41,17 +41,16 @@ pipeline {
        }
     }
 
-    stage('three') {
-    when {
-           expression = {
-           CI=true
-           }
-           steps {
-             sh 'env'
-           }
+    stage('Two') {
+          when {
+            CI=true
+          }
+          steps {
+            sh 'env'
+          }
         }
-    }
-  }
+
+      }
 
   post {
     always {
