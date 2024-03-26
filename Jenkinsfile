@@ -5,6 +5,9 @@ pipeline {
       label 'workstation'
     }
   }
+  options {
+          ansiColor('xterm')
+      }
 
   environment {
     url_name = "mdevops333.online"
