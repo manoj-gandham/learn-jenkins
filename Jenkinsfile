@@ -5,11 +5,12 @@ pipeline {
       label 'workstation'
     }
   }
+
+  triggers { pollSCM('H/2 * * * *') }
+
   options {
           ansiColor('xterm')
   }
-
-  triggers { pollSCM('H/2 * * * *') }
 
   parameters {
           string(name: 'Dev', defaultValue: 'test', description: 'Who should I say hello to?')
