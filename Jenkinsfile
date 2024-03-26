@@ -24,11 +24,11 @@ pipeline {
   stages {
 
     stage('One') {
-      steps {
         input {
-                 message "Should we continue?"
-                 ok "Yes"
-               }
+                         message "Should we continue?"
+                         ok "Yes"
+                       }
+      steps {
         sh 'echo Hello World'
         sh 'echo ${url_name}'
       }
