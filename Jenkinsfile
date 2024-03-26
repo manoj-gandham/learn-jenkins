@@ -1,31 +1,25 @@
 pipeline {
-    agent {
-        node {
-        label 'workstation'
-        }
+
+  agent {
+    node {
+      label 'workstation'
+    }
+  }
+
+  stages {
+
+    stage('One') {
+      steps {
+        sh 'echo Hello World'
+      }
     }
 
-    environment{
-        url = "mdevops333.online"
+  }
 
+  post {
+    always {
+      sh 'echo Post CleanUP steps'
     }
+  }
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                echo '${var.url}'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
 }
