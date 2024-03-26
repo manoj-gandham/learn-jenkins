@@ -41,6 +41,12 @@ pipeline {
        }
     }
 
+    stage('three') {
+           steps {
+             sh 'env'
+           }
+        }
+
   }
 
   post {
