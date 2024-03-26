@@ -44,6 +44,5 @@ pipeline {
       sh 'echo Post CleanUP steps'
     }
   }
-
 }
 
