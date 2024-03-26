@@ -6,11 +6,16 @@ pipeline {
     }
   }
 
+  environment {
+    url_name = "mdevops333.online"
+  }
+
   stages {
 
     stage('One') {
       steps {
         sh 'echo Hello World'
+        sh 'echo ${var.url_name}'
       }
     }
 
