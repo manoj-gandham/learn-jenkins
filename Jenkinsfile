@@ -1,26 +1,23 @@
 pipeline {
- agent any
-    stages {
+  agent any
+  stages {
     parallel {
-        stage ('one') {
-            step {
-                sh 'echo hey'
-            }
+      stage('One') {
+        steps {
+          sh 'echo One'
         }
-        stage ('two') {
-              step {
-                sh 'echo hai'
-             }
+      }
+      stage('Two') {
+        steps {
+          sh 'echo Two'
         }
-        stage ('three') {
-              step {
-                 sh 'echo hello'
-              }
+      }
+      stage('One') {
+        steps {
+          sh 'echo Three'
         }
-
-
+      }
     }
 
-    }
-
+  }
 }
