@@ -44,7 +44,7 @@ pipeline {
     stage('three') {
           when {
             expression {
-              CI=false
+              CI=true
             }
           }
           steps {
