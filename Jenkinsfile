@@ -41,10 +41,10 @@ pipeline {
        }
     }
 
-    stage('Two') {
+    stage('three') {
           when {
             expression {
-              CI=true
+              CI=false
             }
           }
           steps {
